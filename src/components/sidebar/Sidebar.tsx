@@ -14,14 +14,15 @@ const Sidebar = () => {
                         routeList.map((link:routeType,index: number) => (
                             <div className="sub-link" key={index}>
                                 <li>
-                                    <NavLink
-                                        to={link.path}    
-                                        className={({ isActive }) => (isActive ? "active" : "")}
-                                        >
-                                        {link.name}
+                                    <NavLink to={link.path}  className={({ isActive }) => (isActive ? "active" : "")}>
+                                        <div className="sub-text-icon">
+                                            <link.icon className="icons" size={20}/>
+                                            <span>{link.name}</span>
+                                        </div>
                                     </NavLink>
                                 </li>
                             </div>
+                            
                         ))
                     }
                 </ul>

@@ -1,0 +1,25 @@
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.ag-theme-alpine {
+    --ag-header-background-color: #f4f4f4 !important;
+    --ag-header-foreground-color: #b6b3b3 !important;
+}
+
+.add-store-btn {
+    background-color: #ffa08c;
+    color: black;
+    font-size:12px;
+    font-weight: bold;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 6px;
+}

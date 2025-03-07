@@ -3,12 +3,13 @@ import { Fragment, Suspense } from 'react';
 import DashboardLayout from '../pages/layouts/Index';
 import { routeList } from '../utils/constants/routes';
 import { routeType } from '../types';
+import NotFound from '../pages/not-found/NotFound';
 
 const UserRoutes = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-        <DashboardLayout>
-          <Routes>
+        <Routes>
+          <Route element={<DashboardLayout/>}>
             {
               routeList.map((link:routeType,index:number)=>(
                 <Fragment key={index}>
@@ -16,8 +17,9 @@ const UserRoutes = () => {
                 </Fragment>
               ))
             }
-          </Routes>
-        </DashboardLayout>
+          </Route>
+          <Route path="*" element={<NotFound/>}/>
+        </Routes>
     </Suspense>
   )
 }
