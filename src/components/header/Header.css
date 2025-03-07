@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    background: white !important;
+}
+.header h2{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
